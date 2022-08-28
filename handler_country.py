@@ -11,6 +11,7 @@ async def country(update: Update, context: CallbackContext):
         await context.bot.send_message(chat_id=update.effective_chat.id,
                                        parse_mode=ParseMode.HTML,
                                        text='Invalid argument to command /country please visit /help')
+        return
 
     if context.args[0] not in country_dict:
         await context.bot.send_message(chat_id=update.effective_chat.id,

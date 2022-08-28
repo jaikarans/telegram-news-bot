@@ -10,6 +10,7 @@ async def search(update: Update, context: CallbackContext.DEFAULT_TYPE):
         await context.bot.send_message(chat_id=update.effective_chat.id,
                                        parse_mode=ParseMode.HTML,
                                        text='Invalid argument to command /search please visit /help')
+        return
 
     query_string = ''
     for s in context.args:
